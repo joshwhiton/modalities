@@ -22,11 +22,15 @@ If you are in crisis or thinking about harming yourself, stop and reach out for 
 
 Local models do especially well here. Why? For one, using a local model gives means the modality can constitute the entire system prompt. Frontier chat products place your instructions after a long hidden system prompt of their own, so the modality competes for attention with everything else the provider needs the model to do. Run locally, the model's only frame is the practice itself, and smaller models often hold that frame remarkably well. Two, when run locally the entire session can remain confidential, never leaving your machine. People tend to speak more freely and honestly, and can go deeper.
 
+## Chat mode is enough and sometimes best
+
+These sessions can be run in chat mode, using a chat completions endpoint, without an agentic harness. An agentic harness (Pi, Bionic, Hermes, OpenClaw) can have the benefit of referencing a collection of your previous sessions (if you choose to save them) or a personal knowledge base, but it means their context will be consumed by the agentic harness' prompt. For machines with limited resources, and for session that are more pure in general, session run as chat completions are faster, more responsive, and often best. LM Studio, Ollama, oMLX
+
 ## Tested models
 
 Models that have proven adept at these modalities in real sessions. This list grows as more combinations are tested.
 
-- [Gemma 4 12B](https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-gguf) — IFS
+- [Gemma 4 12B](https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-gguf) — Very competent at IFS. Even thinking 'off' works well. Offers just the right length response, just the right nudges and pointers, and keeps the session moving forward. In chat mode, Gemma 4 12B is superior even to much larger models like Qwen 3.8 27B or Qwen 3.8 Flash Next which often leave the user hanging and fail to keep the session moving forward. Larger models may work better when in an agentic loop, as provided by an agentic harness (which Gemma 4 12B struggles to make proper use of) but will then require far more resources.
 
 
 ## Verbal conversations are better than screens
